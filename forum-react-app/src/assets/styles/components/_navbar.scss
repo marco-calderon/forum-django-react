@@ -1,0 +1,39 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    padding-top: 19px;
+    margin-left: 49px;
+    margin-right: 49px;
+    padding-bottom: 17px;
+    justify-content: space-between;
+    position: fixed;
+    left: 98px;
+    right: 357px;
+    top: 0;
+    background-color: #161B3B;
+
+    &-expanded {
+        left: 227px;
+    }
+
+    & .button {
+        border-radius: 12px;
+        height: 43px;
+        padding: 13px 24px;
+        background-color: #313B6B;
+        border: 0;
+        color: white;
+        font-size: 14px;
+        margin: 0px 22px;
+        cursor: pointer;
+    }
+
+    & .icon-button {
+        border-radius: 12px;
+        width: 43px;
+        height: 43px;
+        background-color: #313B6B;
+        border: 0;
+        cursor: pointer;
+    }
+}
