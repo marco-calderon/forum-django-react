@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import django_heroku
 import os
 from pathlib import Path
 from datetime import timedelta
@@ -155,3 +156,5 @@ GRAPHQL_JWT = {
     'JWT_EXPIRATION_DELTA': timedelta(minutes=360),
     'JWT_REFRESH_EXPIRATION_DELTA': timedelta(days=7),
 }
+
+django_heroku.settings(locals())
