@@ -14,6 +14,9 @@ import django_heroku
 import os
 from pathlib import Path
 from datetime import timedelta
+import environ
+
+env = environ.Env()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'nld5ccald&!gst2-g=r*5a9vy@$k0wmdzgww%t02q(yq%@$*1&'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,10 +89,10 @@ WSGI_APPLICATION = 'forum.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'forum',
-        'USER': 'postgres',
-        'PASSWORD': 'p3y1t0aw1379$',
-        'HOST': 'localhost',
+        'NAME': env('DATABASE_NAME'),
+        'USER': env('DATABASE_USER'),
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'),
         'POST': '5432'
     }
 }
