@@ -108,9 +108,9 @@ class AnswerMutation(graphene.Mutation):
         # Add activity record
         Activity(
             creator=user,
-            type=ActivityTypeEnum.ANSWER,
-            type_id=answer.id,
-            action=ActivityActionEnum.CREATED,
+            model=ActivityTypeEnum.ANSWER.value,
+            model_id=answer.id,
+            action=ActivityActionEnum.CREATED.value,
             created_date=datetime.now()
         ).save()
 
@@ -205,6 +205,7 @@ class Query(graphene.ObjectType):
     feed_posts = graphene.List(PostType)
     trending = graphene.List(CategoryType)
     recent_activity = graphene.List(ActivityType)
+    my_posts = graphene.List(PostType)
 
     def resolve_all_categories(root, info):
         return Category.objects.all()
@@ -251,6 +252,13 @@ class Query(graphene.ObjectType):
 
     def resolve_recent_activity(root, info):
         return Activity.objects.order_by('-created_date')[:3]
+
+    @login_required
+    def resolve_my_posts(root, info):
+        user = info.context.user
+        if not user.is_authenticated:
+            raise Exception('Authentication credentials were not provided')
+        return Post.objects.filter(creator__id=user.id).order_by('-created_date')
 
 class Mutation(graphene.ObjectType):
     create_answer = AnswerMutation.Field()

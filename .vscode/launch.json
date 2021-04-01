@@ -13,7 +13,15 @@
                 "runserver"
             ],
             "django": true,
-            "console": "internalConsole"
+            "console": "internalConsole",
+            "env": {
+                "DATABASE_HOST": "ec2-18-204-74-74.compute-1.amazonaws.com",
+                "DATABASE_NAME": "df757d0bp6lc15",
+                "DATABASE_USER": "gebudvwsibrwhp",
+                "DATABASE_PASSWORD": "422ac79a407dccf971eafcf4ffb836fd948a6c1e94c764f7730a7ba2d1606732",
+                "SECRET_KEY": "c*ohb32q74y41or50+repsc_5n41%^zutwj0i9f5k0!",
+                "HEROKU": "False"
+            }
         }
     ]
 }
