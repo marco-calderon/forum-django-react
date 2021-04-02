@@ -27,3 +27,4 @@ forum-react-app/yarn.lock
 forum-react-app/.eslintcache
 forum-react-app/.eslintcache
 /yarn.lock
+/.vscode/launch.json
