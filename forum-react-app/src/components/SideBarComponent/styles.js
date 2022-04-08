@@ -5,7 +5,7 @@ export const Container = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-start;
 `;
 
 export const UserContainer = styled.div`
@@ -131,8 +131,9 @@ export const BottomContainer = styled.div`
     background-color: #1C2146;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-start;
     margin-top: 30px;
+    flex: 1;
 `;
 
 export const TrendTitleContainer = styled.div`

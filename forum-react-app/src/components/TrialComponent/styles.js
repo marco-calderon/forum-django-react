@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    border-radius: 0 42px 0 0;
+    border-radius: 0 42px 42px 0;
     background-color: #6371EC;
     display: flex;
     flex-direction: column;
@@ -11,14 +11,7 @@ export const Container = styled.div`
     transition: transform ease 0.3s, opacity ease 0.3s, max-height ease-in-out 0.3s;
     transform: translateX(${({expanded}) => expanded ? '0px' : '-60px' });
     opacity: ${({expanded}) => expanded ? '1' : '0' };
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    max-height: 24px;
-
-    &:hover {
-        max-height: 244px;
-    }
+    margin-top: 30px;
 `;
 
 export const Title = styled.h4`
@@ -34,19 +27,19 @@ export const TitleContainer = styled.div`
 `;
 
 export const Description = styled.p`
-    font-size: 10px;
+    font-size: 12px;
     color: #fff;
     margin: 0;
+    margin-bottom: 16px;
 `;
 
 export const Button = styled.button`
+    border-radius: 12px;
+    height: 43px;
+    padding: 13px 24px;
     border: 0;
-    margin: 0;
-    font-size: 12px;
-    padding: 8px 16px;
-    color: #fff;
-    border-radius: 9px;
-    margin-top: 27px;
-    background-color: #7884F3;
+    color: white;
+    font-size: 14px;
     cursor: pointer;
+    background-color: #7884F3;
 `;
