@@ -46,21 +46,62 @@ import { getActivityDescription } from '../../utils/activity_text';
 import ReactTimeAgo from 'react-time-ago';
 // import { TOP_POSTS, TRENDING, RECENT_ACTIVITY } from '../../services/graphql';
 
+const data = [];
+  const trendingResponse = {
+    data: {
+      trending: [
+        {
+          id: 1,
+          name: 'Tech',
+          postsCount: 20,
+        },
+        {
+          id: 2,
+          name: 'AR',
+          postsCount: 13,
+        },
+        {
+          id: 3,
+          name: 'Cinema',
+          postsCount: 65,
+        },
+      ],
+    }
+  };
+
+  const recentActivityResponse = {
+    data: {
+      recentActivity: [
+        {
+          id: 1,
+          creator: { username: 'amyharris' },
+          model: 'POST',
+          action: 'SELECTED_ANSWER',
+          createdDate: new Date().getTime() - (7 * 60 * 1000),
+        },
+        {
+          id: 2,
+          creator: { username: 'sambrown' },
+          model: 'POST',
+          action: 'CREATED',
+          createdDate: new Date().getTime() - (10 * 60 * 1000),
+        },
+        {
+          id: 3,
+          creator: { username: 'robertdavis' },
+          model: 'ANSWER',
+          action: 'CREATED',
+          createdDate: new Date().getTime() - (10 * 60 * 1000),
+        },
+      ],
+    }
+  }
+
 const SideBarComponent = () => {
   // const { data } = useQuery(TOP_POSTS);
   // const trendingResponse = useQuery(TRENDING);
   // const recentActivityResponse = useQuery(RECENT_ACTIVITY);
-  const data = [];
-  const trendingResponse = {
-    data: {
-      trending: [],
-    }
-  };
-  const recentActivityResponse = {
-    data: {
-      recentActivity: [],
-    }
-  }
+
 
   if (!data) {
     <p>Loading...</p>
