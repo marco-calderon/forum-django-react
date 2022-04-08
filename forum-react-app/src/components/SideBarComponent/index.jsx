@@ -1,5 +1,5 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
+// import { useQuery } from '@apollo/client';
 import {
   BadgesContainer,
   Badge,
@@ -44,12 +44,23 @@ import Icon from '@mdi/react';
 import { mdiAccount, mdiCheckDecagram, mdiCog } from '@mdi/js';
 import { getActivityDescription } from '../../utils/activity_text';
 import ReactTimeAgo from 'react-time-ago';
-import { TOP_POSTS, TRENDING, RECENT_ACTIVITY } from '../../services/graphql';
+// import { TOP_POSTS, TRENDING, RECENT_ACTIVITY } from '../../services/graphql';
 
 const SideBarComponent = () => {
-  const { data } = useQuery(TOP_POSTS);
-  const trendingResponse = useQuery(TRENDING);
-  const recentActivityResponse = useQuery(RECENT_ACTIVITY);
+  // const { data } = useQuery(TOP_POSTS);
+  // const trendingResponse = useQuery(TRENDING);
+  // const recentActivityResponse = useQuery(RECENT_ACTIVITY);
+  const data = [];
+  const trendingResponse = {
+    data: {
+      trending: [],
+    }
+  };
+  const recentActivityResponse = {
+    data: {
+      recentActivity: [],
+    }
+  }
 
   if (!data) {
     <p>Loading...</p>
