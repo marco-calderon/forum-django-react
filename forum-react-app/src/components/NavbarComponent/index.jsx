@@ -5,15 +5,18 @@ import { mdiBell } from '@mdi/js';
 import SearchComponent from '../SearchComponent';
 import classNames from 'classnames';
 import './styles.scss';
+import { Container } from './styles';
 
 const NavbarComponent = ({ menuToggled }) => {
   return (
     <div className={classNames({ navbar: true, 'navbar-expanded': menuToggled})}>
-      <SearchComponent />
-      <button className="button">Ask Question</button>
-      <button className="icon-button">
-        <Icon path={mdiBell} size="23px" color="#7884F3" />
-      </button>
+      <Container>
+        <SearchComponent />
+        <button className="button">Ask Question</button>
+        <button className="icon-button">
+          <Icon path={mdiBell} size="23px" color="#7884F3" />
+        </button>
+      </Container>
     </div>
   );
 };

@@ -3,16 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.div`
     display: flex;
     flex-direction: row;
-    padding-top: 19px;
     margin-left: 49px;
     margin-right: 49px;
-    padding-bottom: 17px;
     justify-content: space-between;
-    position: fixed;
-    left: ${props => props.menuToggled ? '227px' : '98px'};
-    right: 357px;
-    top: 0;
     background-color: #161B3B;
+    flex: 1;
 `;
 
 export const Button = styled.button`

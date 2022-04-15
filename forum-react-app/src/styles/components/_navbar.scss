@@ -2,8 +2,6 @@
     display: flex;
     flex-direction: row;
     padding-top: 19px;
-    margin-left: 49px;
-    margin-right: 49px;
     padding-bottom: 17px;
     justify-content: space-between;
     position: fixed;
@@ -12,6 +10,7 @@
     top: 0;
     background-color: #161B3B;
     transition: left ease 0.3s;
+    min-width: 700px;
 
     &-expanded {
         left: 227px;

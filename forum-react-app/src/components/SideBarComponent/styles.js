@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const UserContainer = styled.div`
     padding: 24px 40px 30px 40px;
-    border-radius: 0px 42px 0px 42px;
+    border-radius: 0px 0px 0px 42px;
     background-color: #1C2146;
     display: flex;
     flex-direction: column;
@@ -126,7 +126,7 @@ export const StatusLabel = styled.h5`
 `;
 
 export const BottomContainer = styled.div`
-    border-radius: 42px 0px 42px 0px;
+    border-radius: 42px 0px 0px 42px;
     padding: 41px;
     background-color: #1C2146;
     display: flex;
