@@ -6,7 +6,6 @@ export const Container = styled.div`
     margin-left: 49px;
     margin-right: 49px;
     justify-content: space-between;
-    background-color: #161B3B;
     flex: 1;
 `;
 
